@@ -126,13 +126,13 @@ class _HomeBodyState extends State<HomeBody> {
 
   Widget _covidCasesText() {
     return Transform.translate(
-      offset: const Offset(70.0, -480.0),
+      offset: const Offset(80.0, 110.0),
       child: Container(
         width: 180.0,
+        height: double.infinity,
         child: Align(
-          alignment: Alignment.centerRight,
+          alignment: Alignment.topCenter,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text(
