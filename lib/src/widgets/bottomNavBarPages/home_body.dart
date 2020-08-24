@@ -71,6 +71,7 @@ class _HomeBodyState extends State<HomeBody> {
       width: double.infinity,
       child: Stack(
         overflow: Overflow.visible,
+        alignment: Alignment.topCenter,
         children: [
           Container(
             height: 250.0,
@@ -93,7 +94,7 @@ class _HomeBodyState extends State<HomeBody> {
             ),
           ),
           Transform.translate(
-            offset: const Offset(20.0, 150.0),
+            offset: const Offset(-120.0, 150.0),
             child: Image(
               width: 45,
               height: 45,
@@ -101,7 +102,7 @@ class _HomeBodyState extends State<HomeBody> {
             ),
           ),
           Transform.translate(
-            offset: const Offset(150.0, 100.0),
+            offset: const Offset(30.0, 100.0),
             child: Image(
               width: 50,
               height: 50,
@@ -109,7 +110,7 @@ class _HomeBodyState extends State<HomeBody> {
             ),
           ),
           Transform.translate(
-            offset: const Offset(40.0, 50.0),
+            offset: const Offset(-80.0, 50.0),
             child: Image(
               width: 120,
               height: 240,
@@ -125,7 +126,7 @@ class _HomeBodyState extends State<HomeBody> {
 
   Widget _covidCasesText() {
     return Transform.translate(
-      offset: const Offset(160.0, -480.0),
+      offset: const Offset(70.0, -480.0),
       child: Container(
         width: 180.0,
         child: Align(
@@ -174,7 +175,7 @@ class _HomeBodyState extends State<HomeBody> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Transform.translate(
-        offset: Offset(25.0, 205.0),
+        offset: Offset(0.0, 205.0),
         child: Column(
           children: [
             Card(
