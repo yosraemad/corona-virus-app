@@ -1,0 +1,69 @@
+name: corona_app
+description: A new Flutter project.
+
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.3
+  font_awesome_flutter: ^8.0.1
+  ola_like_country_picker: ^0.1.2
+  http: ^0.12.2
+  shared_preferences: ^0.5.10
+  provider: ^4.3.2+1
+  floating_bottom_navigation_bar: ^1.4.1
+  intl: ^0.16.1
+  webview_flutter: ^0.3.22+1
+  url_launcher: ^5.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/login_logo.png
+    - assets/images/corona_image.png
+    - assets/images/coughing_man.png
+    - assets/images/death_graph.png
+    - assets/images/active_graph.png
+    - assets/images/closed_graph.png
+    - assets/images/gloves.png
+    - assets/images/splash.png
+    - assets/images/meditation.jpg
+    - assets/images/high_fever.png
+    - assets/images/cough.png
+    - assets/images/sore_throat.png
+    - assets/images/wear_a_mask.png
+    - assets/images/wash_hands.png
+    - assets/images/avoid_contact.png
+    - assets/images/cover_cough.png
+    - assets/images/header.png
+    - assets/images/avoid_close_contact.png
+    - assets/images/clean_your_hands.png
+    - assets/images/wear_a_facemask.png
+    - assets/images/stay_at_home.png
+
+  fonts:
+    - family: WorkSansSemiBold
+      fonts:
+        - asset: assets/fonts/Work_Sans/WorkSans-SemiBold.ttf
+
+    - family: WorkSansBold
+      fonts:
+        - asset: assets/fonts/Work_Sans/WorkSans-Bold.ttf
+
+    - family: WorkSansMedium
+      fonts:
+        - asset: assets/fonts/Work_Sans/WorkSans-Medium.ttf
+
+    - family: WorkSansThin
+      fonts:
+        - asset: assets/fonts/Work_Sans/WorkSans-Thin.ttf
