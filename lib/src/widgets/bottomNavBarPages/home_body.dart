@@ -4,6 +4,7 @@ import 'package:corona_app/src/data/corona_api.dart';
 import 'package:corona_app/src/models/corona_data.dart';
 import 'package:corona_app/src/models/profile.dart';
 import 'package:corona_app/src/providers/user_provider.dart';
+import 'package:corona_app/src/screens/search_screen.dart';
 import 'package:corona_app/src/widgets/chart.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -52,6 +53,21 @@ class _HomeBodyState extends State<HomeBody> {
                 color: Color(0xFFF8F8FF),
                 child: _buildHeader(),
               ),
+            ),
+          );
+        } else if (snapshot.hasError) {
+          return Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text("No Data !"),
+                RaisedButton(
+                  onPressed: () =>
+                      Navigator.pushNamed(context, SearchScreen.routeName),
+                  child: Text("Search for another country"),
+                ),
+              ],
             ),
           );
         } else {

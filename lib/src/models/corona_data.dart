@@ -85,26 +85,26 @@ class CoronaData {
   }
 
   String get recoveredPercentage {
-    return (last8DaysRecovered[last8DaysRecovered.length - 1].value /
-                last8DaysRecovered[last8DaysRecovered.length - 2].value *
-                100 -
-            100)
-        .toStringAsFixed(2);
+    double percent = (last8DaysRecovered[last8DaysRecovered.length - 1].value /
+            last8DaysRecovered[last8DaysRecovered.length - 2].value *
+            100 -
+        100);
+    return percent.isNaN ? 0 : percent.toStringAsFixed(2);
   }
 
   String get deathPercentage {
-    return (last8DaysDeaths[last8DaysDeaths.length - 1].value /
-                last8DaysDeaths[last8DaysDeaths.length - 2].value *
-                100 -
-            100)
-        .toStringAsFixed(2);
+    double percent = last8DaysDeaths[last8DaysDeaths.length - 1].value /
+            last8DaysDeaths[last8DaysDeaths.length - 2].value *
+            100 -
+        100;
+    return percent.isNaN ? 0 : percent.toStringAsFixed(2);
   }
 
   String get casesPercentage {
-    return (last8DaysCases[last8DaysCases.length - 1].value /
-                last8DaysCases[last8DaysCases.length - 2].value *
-                100 -
-            100)
-        .toStringAsFixed(2);
+    double percent = last8DaysCases[last8DaysCases.length - 1].value /
+            last8DaysCases[last8DaysCases.length - 2].value *
+            100 -
+        100;
+    return percent.isNaN ? 0 : percent.toStringAsFixed(2);
   }
 }

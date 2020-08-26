@@ -108,8 +108,7 @@ class _InformationScreenState extends State<InformationScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.popAndPushNamed(
-                              context, MainScreen.routeName);
+                          Navigator.pop(context);
                         },
                         child: Card(
                           child: Container(
