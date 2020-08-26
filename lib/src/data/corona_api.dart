@@ -10,12 +10,12 @@ Future<CoronaData> fetchData(String country) async {
   Map<String, dynamic> last8Days;
   if (country == "Worldwide") {
     response = await http.get(apiUrl + "/all?allowNull=true");
-    last8DaysResponse = await http.get(apiUrl + "/historical/all?lastdays=8");
+    last8DaysResponse = await http.get(apiUrl + "/historical/all?lastdays=4");
     last8Days = json.decode(last8DaysResponse.body);
   } else {
     response = await http.get(apiUrl + "/countries/$country");
     last8DaysResponse =
-        await http.get(apiUrl + "/historical/$country?lastdays=8");
+        await http.get(apiUrl + "/historical/$country?lastdays=4");
     last8Days = json.decode(last8DaysResponse.body)["timeline"];
   }
   return CoronaData.fromMap(json.decode(response.body), last8Days);

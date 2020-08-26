@@ -3,7 +3,6 @@ import 'package:corona_app/src/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-//TODO: REFRESH EVERY 24 HOURS
 class TasksBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

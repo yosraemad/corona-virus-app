@@ -4,6 +4,7 @@ import 'package:corona_app/src/data/corona_api.dart';
 import 'package:corona_app/src/models/corona_data.dart';
 import 'package:corona_app/src/models/profile.dart';
 import 'package:corona_app/src/providers/user_provider.dart';
+import 'package:corona_app/src/widgets/chart.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
@@ -212,13 +213,19 @@ class _HomeBodyState extends State<HomeBody> {
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsets.only(top: 5.0),
-                            child: Image(
-                              width: 125,
-                              height: 37.5,
-                              image:
-                                  AssetImage("assets/images/closed_graph.png"),
+                          Transform.scale(
+                            scale: 1.2,
+                            child: Transform.translate(
+                              offset: const Offset(-10, -10),
+                              child: Padding(
+                                padding: EdgeInsets.only(bottom: 2.0),
+                                child: SizedBox(
+                                  width: 130,
+                                  height: 37.5,
+                                  child:
+                                      Chart(data.createRecoveredChartSeries()),
+                                ),
+                              ),
                             ),
                           ),
                         ],
@@ -284,7 +291,7 @@ class _HomeBodyState extends State<HomeBody> {
                               Column(
                                 children: [
                                   Text(
-                                    "+12%",
+                                    data.recoveredPercentage + "%",
                                     style: TextStyle(
                                       fontFamily: "WorkSansMedium",
                                       fontSize: 20.0,
@@ -343,13 +350,18 @@ class _HomeBodyState extends State<HomeBody> {
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsets.only(top: 5.0),
-                            child: Image(
-                              width: 125,
-                              height: 37.5,
-                              image:
-                                  AssetImage("assets/images/death_graph.png"),
+                          Transform.scale(
+                            scale: 1.2,
+                            child: Transform.translate(
+                              offset: const Offset(-10, -10),
+                              child: Padding(
+                                padding: EdgeInsets.only(bottom: 2.0),
+                                child: SizedBox(
+                                  width: 130,
+                                  height: 37.5,
+                                  child: Chart(data.createDeathsChartSeries()),
+                                ),
+                              ),
                             ),
                           ),
                         ],
@@ -374,7 +386,7 @@ class _HomeBodyState extends State<HomeBody> {
                               Column(
                                 children: [
                                   Text(
-                                    "+12.6%",
+                                    data.deathPercentage + "%",
                                     style: TextStyle(
                                       fontFamily: "WorkSansMedium",
                                       fontSize: 20.0,
@@ -474,13 +486,18 @@ class _HomeBodyState extends State<HomeBody> {
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsets.only(top: 5.0),
-                            child: Image(
-                              width: 125,
-                              height: 37.5,
-                              image:
-                                  AssetImage("assets/images/active_graph.png"),
+                          Transform.scale(
+                            scale: 1.2,
+                            child: Transform.translate(
+                              offset: const Offset(-10, -10),
+                              child: Padding(
+                                padding: EdgeInsets.only(bottom: 2.0),
+                                child: SizedBox(
+                                  width: 130,
+                                  height: 37.5,
+                                  child: Chart(data.createCasesChartSeries()),
+                                ),
+                              ),
                             ),
                           ),
                         ],
@@ -505,7 +522,7 @@ class _HomeBodyState extends State<HomeBody> {
                               Column(
                                 children: [
                                   Text(
-                                    "+25.7%",
+                                    data.casesPercentage + "%",
                                     style: TextStyle(
                                       fontFamily: "WorkSansMedium",
                                       fontSize: 20.0,
